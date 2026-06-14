@@ -373,11 +373,24 @@ hr {
     line-height: 1.75;
 }
 /* ALLINEA TUTTO AL CENTRO */
-#fascicolo,
-.sezione,
+#fascicolo {
+    background: linear-gradient(135deg, #080d18 0%, #10182a 100%);
+    border: 1px solid #2a3040;
+    border-left: 6px solid var(--oro);
+    padding: 18px 24px;
+    margin: 0 auto 10px auto;
+    max-width: 860px;
+    position: relative;
+    overflow: hidden;
+}
+.sezione {
+    margin: 0 auto 10px auto;
+    max-width: 860px;
+}
 .scheda,
 hr {
+    border: none;
+    border-top: 1px solid rgba(200,168,75,0.2);
+    margin: 22px auto;
     max-width: 860px;
-    margin-left: auto;
-    margin-right: auto;
 }
