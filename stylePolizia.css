@@ -206,7 +206,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 860px;
+    max-width: 1100px;
     margin: 0 auto 30px auto;
 }
 
@@ -239,7 +239,7 @@ hr {
 }
 /* CASO INTESTAZIONE */
 #caso-intestazione {
-    max-width: 860px;
+    max-width: 1100px;
     margin: 0 auto 30px auto;
     border: 1px solid rgba(200,168,75,0.3);
     border-top: 5px solid var(--rosso);
@@ -379,24 +379,24 @@ hr {
     border-left: 6px solid var(--oro);
     padding: 18px 24px;
     margin: 0 auto 10px auto;
-    max-width: 860px;
+    max-width: 1100px;
     position: relative;
     overflow: hidden;
 }
 
 .sezione {
     margin: 0 auto 10px auto;
-    max-width: 860px;
+    max-width: 1100px;
 }
 
 hr {
     border: none;
     border-top: 1px solid rgba(200,168,75,0.2);
     margin: 22px auto;
-    max-width: 860px;
+    max-width: 1100px;
 }
 
 #piede {
-    max-width: 860px;
+    max-width: 1100px;
     margin: 40px auto 0 auto;
 }
