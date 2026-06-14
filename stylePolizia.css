@@ -6,6 +6,7 @@
     --rosso: #cc0000;
     --bianco: #e8eef5;
     --sfondo: #0f1923;
+    --larghezza: 1400px;
 }
 
 body {
@@ -30,10 +31,11 @@ body {
     background: linear-gradient(180deg, #001040 0%, #0a0f1a 100%);
     border: 2px solid var(--oro);
     border-top: 7px solid var(--blu);
-    margin-bottom: 25px;
+    margin: 0 auto 25px auto;
+    max-width: var(--larghezza);
     position: relative;
     box-shadow: 0 4px 40px rgba(0,48,135,0.5), inset 0 1px 0 rgba(200,168,75,0.15);
-}non
+}
 
 #intestazione::before,
 #intestazione::after {
@@ -93,7 +95,8 @@ body {
 hr {
     border: none;
     border-top: 1px solid rgba(200,168,75,0.2);
-    margin: 22px 0;
+    margin: 22px auto;
+    max-width: var(--larghezza);
 }
 
 /* FASCICOLO */
@@ -102,7 +105,8 @@ hr {
     border: 1px solid #2a3040;
     border-left: 6px solid var(--oro);
     padding: 18px 24px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
+    max-width: var(--larghezza);
     position: relative;
     overflow: hidden;
 }
@@ -134,7 +138,10 @@ hr {
 }
 
 /* SEZIONI */
-.sezione { margin-bottom: 10px; }
+.sezione {
+    margin: 0 auto 10px auto;
+    max-width: var(--larghezza);
+}
 
 .sezione h3 {
     color: #fff;
@@ -190,7 +197,8 @@ hr {
 /* PIEDE */
 #piede {
     text-align: center;
-    margin-top: 40px;
+    margin: 40px auto 0 auto;
+    max-width: var(--larghezza);
     font-size: 11px;
     color: #364050;
     letter-spacing: 3px;
@@ -201,12 +209,13 @@ hr {
     font-size: 12px;
     margin-top: 5px;
 }
+
 /* MULTIMEDIA */
 #multimedia {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 1100px;
+    max-width: var(--larghezza);
     margin: 0 auto 30px auto;
 }
 
@@ -237,9 +246,10 @@ hr {
     width: 100%;
     accent-color: var(--oro);
 }
+
 /* CASO INTESTAZIONE */
 #caso-intestazione {
-    max-width: 1100px;
+    max-width: var(--larghezza);
     margin: 0 auto 30px auto;
     border: 1px solid rgba(200,168,75,0.3);
     border-top: 5px solid var(--rosso);
@@ -371,32 +381,4 @@ hr {
     font-size: 13px;
     color: #b8c8d8;
     line-height: 1.75;
-}
-/* ALLINEA TUTTO AL CENTRO */
-#fascicolo {
-    background: linear-gradient(135deg, #080d18 0%, #10182a 100%);
-    border: 1px solid #2a3040;
-    border-left: 6px solid var(--oro);
-    padding: 18px 24px;
-    margin: 0 auto 10px auto;
-    max-width: 1100px;
-    position: relative;
-    overflow: hidden;
-}
-
-.sezione {
-    margin: 0 auto 10px auto;
-    max-width: 1100px;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid rgba(200,168,75,0.2);
-    margin: 22px auto;
-    max-width: 1100px;
-}
-
-#piede {
-    max-width: 1100px;
-    margin: 40px auto 0 auto;
 }
