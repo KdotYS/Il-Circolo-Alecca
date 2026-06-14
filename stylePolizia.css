@@ -372,3 +372,12 @@ hr {
     color: #b8c8d8;
     line-height: 1.75;
 }
+/* ALLINEA TUTTO AL CENTRO */
+#fascicolo,
+.sezione,
+.scheda,
+hr {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
