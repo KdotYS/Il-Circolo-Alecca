@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Oswald:wght@600;700&display=swap');
+
+:root {
+    --rosso: #8b0000;
+    --rosso-vivo: #cc0000;
+    --bianco: #e0e0e0;
+    --sfondo: #080808;
+}
+
+body {
+    background-color: var(--sfondo);
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255,255,255,0.012) 2px,
+            rgba(255,255,255,0.012) 4px
+        ),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: auto, 200px 200px;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#contenitore {
+    background: linear-gradient(160deg, #111 0%, #0a0a0a 100%);
+    border: 1px solid #2a2a2a;
+    border-top: 5px solid var(--rosso-vivo);
+    padding: 40px 50px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 60px rgba(139,0,0,0.3), 0 0 120px rgba(0,0,0,0.8);
+}
+
+/* angoli decorativi */
+#contenitore::before,
+#contenitore::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: var(--rosso);
+    border-style: solid;
+}
+#contenitore::before {
+    bottom: 10px; left: 10px;
+    border-width: 0 0 2px 2px;
+}
+#contenitore::after {
+    bottom: 10px; right: 10px;
+    border-width: 0 2px 2px 0;
+}
+
+/* LOGO */
+#simbolo {
+    font-size: 54px;
+    margin: 0 0 10px 0;
+    color: var(--rosso-vivo);
+    filter: drop-shadow(0 0 12px rgba(204,0,0,0.6));
+    animation: pulsa 3s infinite;
+}
+
+@keyframes pulsa {
+    0%, 100% { filter: drop-shadow(0 0 8px rgba(204,0,0,0.5)); }
+    50%       { filter: drop-shadow(0 0 20px rgba(204,0,0,0.9)); }
+}
+
+#logo h1 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    margin: 0;
+}
+
+#sottotitolo {
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 8px;
+}
+
+/* DIVISORE */
+hr {
+    border: none;
+    border-top: 1px solid #222;
+    margin: 20px 0;
+}
+
+/* FORM */
+#istruzione {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+input {
+    background: #0d0d0d;
+    border: 1px solid #333;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 18px;
+    padding: 12px;
+    width: 200px;
+    text-align: center;
+    letter-spacing: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--rosso-vivo);
+    box-shadow: 0 0 10px rgba(204,0,0,0.25);
+}
+
+button {
+    background: #111;
+    border: 1px solid #666;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-top: 16px;
+    padding: 11px 30px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background: #1a1a1a;
+    border-color: #fff;
+}
+
+#messaggio-errore {
+    color: var(--rosso-vivo);
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 14px;
+    min-height: 18px;
+}
+
+#avviso {
+    color: #333;
+    font-size: 10px;
+    letter-spacing: 1px;
+}

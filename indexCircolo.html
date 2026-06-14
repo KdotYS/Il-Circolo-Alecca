@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Circolo — Membri</title>
+    <link rel="stylesheet" href="styleCircolo.css">
+</head>
+<body>
+
+    <div id="intestazione">
+        <p id="simbolo">⚔</p>
+        <h1>IL CIRCOLO</h1>
+        <p id="sottotitolo">ZONA RISERVATA AI MEMBRI REGISTRATI</p>
+    </div>
+
+    <hr>
+
+    <!-- REGISTRAZIONE NUOVO MEMBRO -->
+    <div id="sezione-registrazione">
+        <h2>📋 REGISTRAZIONE NUOVO MEMBRO</h2>
+
+        <div id="form-registrazione">
+
+            <div class="campo">
+                <label>NOME</label><br>
+                <input type="text" id="nome" placeholder="Es. Marco">
+            </div>
+
+            <div class="campo">
+                <label>COGNOME</label><br>
+                <input type="text" id="cognome" placeholder="Es. Rossi">
+            </div>
+
+            <div class="campo">
+                <label>ETÀ</label><br>
+                <input type="number" id="eta" placeholder="Es. 28" min="18" max="99">
+            </div>
+
+            <div class="campo">
+                <label>PESO (kg)</label><br>
+                <input type="number" id="peso" placeholder="Es. 85" min="40" max="200">
+            </div>
+
+            <div class="campo">
+                <label>ESPERIENZE DI COMBATTIMENTO PASSATE</label><br>
+                <textarea id="esperienze" placeholder="Descrivi le tue esperienze..."></textarea>
+            </div>
+
+            <button onclick="registraMembro()">ISCRIVITI AL CIRCOLO</button>
+
+            <p id="messaggio-form"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- LISTA PARTECIPANTI -->
+    <div id="sezione-lista">
+        <h2>🥊 PARTECIPANTI ISCRITTI</h2>
+
+        <table id="tabella-membri">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>NOME</th>
+                    <th>COGNOME</th>
+                    <th>ETÀ</th>
+                    <th>PESO</th>
+                    <th>ESPERIENZE</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabella">
+                <!-- Popolato da scriptCircolo.js -->
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <div id="piede">
+        <hr>
+
+<!-- PROSSIMO INCONTRO -->
+<div id="sezione-incontro">
+    <h2>📍 PROSSIMO INCONTRO</h2>
+
+    <div class="campo">
+        <label>LUOGO</label><br>
+        <input type="text" id="luogo" value="Magazzino 17, zona industriale Milano">
+    </div>
+
+    <div class="campo">
+        <label>DATA (YYYY-MM-DD HH:MM)</label><br>
+        <input type="text" id="dataIncontro" value="2026-06-12 22:30">
+    </div>
+
+    <div class="campo">
+        <label>PREZZO (€)</label><br>
+        <input type="number" id="prezzo" value="25">
+    </div>
+
+    <div class="campo">
+        <label>INFO</label><br>
+        <textarea id="infoBiglietto">Ingresso su invito. Pagamento in contanti. Vietato registrare.</textarea>
+    </div>
+
+    <button onclick="salvaIncontro()">AGGIORNA DETTAGLI</button>
+
+    <div id="riepilogo-incontro"></div>
+    <div id="countdown"></div>
+
+    <iframe id="mappa" width="100%" height="250" style="border:0; margin-top:15px;"></iframe>
+
+    <div id="qr-container">
+        <canvas id="qr"></canvas>
+    </div>
+    
+        <p>IL CIRCOLO — VIETATA LA DIVULGAZIONE — SOLO MEMBRI</p>
+        <p id="ora"></p>
+    </div>
+
+    <script src="scriptCircolo.js"></script>
+</body>
+</html>

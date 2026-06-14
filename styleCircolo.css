@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Oswald:wght@600;700&display=swap');
+
+:root {
+    --rosso: #8b0000;
+    --rosso-vivo: #cc0000;
+    --oro: #aa8800;
+    --bianco: #cccccc;
+    --sfondo: #0a0a0a;
+}
+
+body {
+    background-color: var(--sfondo);
+    background-image:
+        linear-gradient(rgba(139,0,0,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139,0,0,0.06) 1px, transparent 1px),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 32px 32px, 32px 32px, 200px 200px;
+    color: var(--bianco);
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* INTESTAZIONE */
+#intestazione {
+    text-align: center;
+    padding: 28px 20px;
+    background: linear-gradient(180deg, #110000 0%, #0a0a0a 100%);
+    border: 2px solid #2a0000;
+    border-top: 6px solid var(--rosso-vivo);
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 0 4px 40px rgba(139,0,0,0.4);
+}
+
+#simbolo {
+    font-size: 50px;
+    margin: 0 0 8px 0;
+    color: var(--rosso-vivo);
+    filter: drop-shadow(0 0 10px rgba(204,0,0,0.7));
+}
+
+#intestazione h1 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    margin: 0;
+}
+
+#sottotitolo {
+    color: #444;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 8px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #1a1a1a;
+    margin: 25px 0;
+}
+
+/* REGISTRAZIONE */
+#sezione-registrazione {
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+#sezione-registrazione h2 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+/* CAMPI FORM */
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    color: #555;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.campo input,
+.campo textarea {
+    background: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    margin-top: 6px;
+    padding: 10px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--rosso-vivo);
+    box-shadow: 0 0 8px rgba(204,0,0,0.2);
+}
+
+/* PULSANTE */
+button {
+    background: var(--rosso);
+    border: 1px solid var(--rosso-vivo);
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    padding: 13px 30px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: var(--rosso-vivo);
+}
+
+#messaggio-form {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    min-height: 18px;
+}
+
+/* LISTA PARTECIPANTI */
+#sezione-lista h2 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+/* TABELLA */
+#tabella-membri {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tabella-membri th {
+    background: #0f0f0f;
+    border: 1px solid #222;
+    color: var(--rosso-vivo);
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 11px 13px;
+    text-align: left;
+}
+
+#tabella-membri td {
+    border: 1px solid #1a1a1a;
+    color: var(--bianco);
+    font-size: 13px;
+    padding: 10px 13px;
+    vertical-align: top;
+}
+
+#tabella-membri tr:nth-child(even) td {
+    background: #0d0d0d;
+}
+
+#tabella-membri tr:hover td {
+    background: #150000;
+}
+
+/* EVIDENZIA SPECIALI */
+.membro-speciale td {
+    color: #ffaa00;
+}
+
+/* PIEDE */
+#piede {
+    text-align: center;
+    color: #222;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+#ora {
+    color: #2a2a2a;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+#sezione-incontro {
+    max-width: 580px;
+    margin: 0 auto;
+    box-shadow: 0 0 25px rgba(204,0,0,0.2);
+    padding: 20px;
+    border: 1px solid #2a0000;
+}
+
+#sezione-incontro h2 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+#countdown {
+    margin-top: 15px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #ffaa00;
+    text-align: center;
+}
+
+#qr-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#qr {
+    background: white;
+    padding: 10px;
+}
+
+#riepilogo-incontro {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #2a0000;
+    background: #0f0f0f;
+}
+
+/* ===== FIX LEGGIBILITÀ ===== */
+
+#sottotitolo {
+    color: #888 !important; /* prima troppo scuro */
+}
+
+.campo label {
+    color: #aaa !important; /* più leggibile */
+}
+
+#piede {
+    color: #555 !important;
+}
+
+#ora {
+    color: #777 !important;
+}
+
+/* Migliora contrasto generale */
+#riepilogo-incontro {
+    color: #eee;
+    border: 1px solid #440000;
+}
+
+/* Countdown più visibile */
+#countdown {
+    color: #ffcc00;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255,200,0,0.4);
+}
+
+/* Tabella più leggibile */
+#tabella-membri td {
+    color: #ddd;
+}

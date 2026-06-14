@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Circolo — Accesso Riservato</title>
+    <link rel="stylesheet" href="styleLogin.css">
+</head>
+<body>
+
+    <div id="contenitore">
+
+        <div id="logo">
+            <p id="simbolo">☠</p>
+            <h1>IL CIRCOLO</h1>
+            <p id="sottotitolo">ACCESSO RISERVATO AI MEMBRI</p>
+        </div>
+
+        <hr>
+
+        <div id="form-accesso">
+            <p id="istruzione">Inserisci il codice di accesso</p>
+            <input type="password" id="codiceUnivoco" placeholder="••••••••">
+            <br>
+            <button onclick="verificaUtenza()">ENTRA</button>
+            <p id="messaggio-errore"></p>
+        </div>
+
+        <hr>
+
+        <div id="avviso">
+            <p>⚠ Accesso non autorizzato verrà segnalato ⚠</p>
+        </div>
+
+    </div>
+
+    <script src="scriptLogin.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polizia di Stato - Database Riservato</title>
+    <link rel="stylesheet" href="stylePolizia.css">
+</head>
+<body>
+    <div id="intestazione">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Emblem_of_Italy.svg/200px-Emblem_of_Italy.svg.png" id="stemma" alt="Stemma della Repubblica Italiana">
+        <h1>POLIZIA DI STATO</h1>
+        <h2>ARCHIVIO DIGITALE RISERVATO</h2>
+        <p id="livello">⚠ LIVELLO DI ACCESSO: INVESTIGATORI ⚠</p>
+    </div>
+
+<!-- ===== INTESTAZIONE CASO ===== -->
+<div id="caso-intestazione">
+    <div id="caso-header">
+        <span class="caso-tag">⚠ CASO ATTIVO</span>
+        <h2 id="caso-titolo">OMICIDIO — BARTOLDO GALLO</h2>
+        <p id="caso-sottotitolo">FASCICOLO N° 2024-1103 — INDAGINI IN CORSO</p>
+    </div>
+
+    <div class="caso-griglia">
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">VITTIMA</span>
+            <span class="caso-valore">GALLO, Bartoldo — M — 47 anni</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">DATA DECESSO</span>
+            <span class="caso-valore">Notte tra il 13 e il 14 giugno 2024</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">ORARIO STIMATO</span>
+            <span class="caso-valore">Tra le 22:00 e le 23:00 — in fase di conferma</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">LUOGO</span>
+            <span class="caso-valore">Abitazione privata della vittima — via [OMISSIS], interno 4</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">CAUSA MORTE</span>
+            <span class="caso-valore">Ferita da arma da taglio — lacerazione rene destro — emorragia interna</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">ARMA</span>
+            <span class="caso-valore">Lama stimata 15–18 cm — non ancora repertata</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">SCOPERTA CORPO</span>
+            <span class="caso-valore">Ore 23:47 — segnalazione anonima al 112</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">PRIMO INTERVENTO</span>
+            <span class="caso-valore">Volante — ore 23:52 — medico legale allertato</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">EFFRAZIONE</span>
+            <span class="caso-valore">Nessun segno — accesso tramite porta principale</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">TESTIMONI</span>
+            <span class="caso-valore">2 soggetti sentiti — dichiarazioni parzialmente discordanti</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">MOVENTE</span>
+            <span class="caso-valore">Non determinato — ipotesi al vaglio degli inquirenti</span>
+        </div>
+
+        <div class="caso-blocco">
+            <span class="caso-etichetta">STATO INDAGINI</span>
+            <span class="caso-valore" id="stato-indagini">🔴 APERTO — PRIORITÀ MASSIMA</span>
+        </div>
+
+    </div>
+
+    <div id="caso-note">
+        <p>⚠ <strong>NOTE INVESTIGATORE:</strong> La scena non presenta segni di colluttazione evidente. Posizione del corpo compatibile con aggressione alle spalle. Presenza di un bicchiere sul tavolo — campioni inviati al laboratorio. Porta finestra del balcone trovata socchiusa. Cellulare della vittima non rinvenuto.</p>
+    </div>
+</div>
+<!-- ===== FINE INTESTAZIONE CASO ===== -->
+
+   <!-- ===== SEZIONE MULTIMEDIA ===== -->
+    <div id="multimedia">
+
+        <div class="video-blocco">
+            <span class="video-label">🎥 VIDEO TELECAMERA — SCENA DEL CRIMINE</span>
+            <video controls>
+                <source src="video_telecamera_assassinio.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-blocco">
+            <span class="video-label">🎙️ INTERROGATORIO — PIETRO</span>
+            <audio controls>
+                <source src="interrogatorio_pietro.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="video-blocco">
+            <span class="video-label">🎙️ INTERROGATORIO — DANIEL</span>
+            <audio controls>
+                <source src="interrogatorio_daniel.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="video-blocco">
+            <span class="video-label">🎙️ INTERROGATORIO — AMANDA</span>
+            <audio controls>
+                <source src="interrogatorio_amanda.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="video-blocco">
+            <span class="video-label">🎙️ INTERROGATORIO — GIUSEPPE</span>
+            <audio controls>
+                <source src="interrogatorio_giuseppe.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+    </div>
+    <!-- ===== FINE MULTIMEDIA ===== -->
+
+    <hr>
+
+    <div id="fascicolo">
+        <h3>📁 FASCICOLO N° 2023-0847</h3>
+        <p><strong>Oggetto:</strong> Circolo abusivo sotterraneo — combattimenti illegali</p>
+        <p><strong>Stato:</strong> <span id="stato">CHIUSO — MANCANZA DI PROVE</span></p>
+        <p><strong>Data apertura:</strong> 12 febbraio 2023</p>
+        <p><strong>Data chiusura:</strong> 14 novembre 2023</p>
+    </div>
+
+    <hr>
+
+    <div class="sezione">
+        <h3>🕵️ SOSPETTATI</h3>
+        <div class="scheda">
+            <p><strong>NOME:</strong> Daniel Ferro</p>
+            <p><strong>RUOLO SOSPETTATO:</strong> Co-proprietario del circolo</p>
+            <p><strong>NOTE:</strong> Intercettate chiamate in lingua francese riguardanti scambi di informazioni e materiale per gli incontri. Il mittente delle chiamate non è stato identificato. Sottoposto ad arresti domiciliari durante la prima fase delle indagini. Nessun precedente penale registrato.</p>
+            <p><strong>Stato attuale:</strong> Libero</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="sezione">
+        <h3>📍 LUOGHI DI INTERESSE</h3>
+        <div class="scheda">
+            <p>Gli incontri venivano organizzati prevalentemente in <strong>luoghi abbandonati</strong>, fognature e strutture dismesse. I criteri di selezione dei siti prevedevano: ampia metratura, scarsa frequentazione civile, posizione periferica rispetto al centro urbano.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="sezione">
+        <h3>🔎 PROVE RACCOLTE</h3>
+        <div class="scheda">
+            <p><strong>Data:</strong> 30 maggio 2023</p>
+            <p><strong>Elemento:</strong> Pagina web utilizzata per le iscrizioni al circolo. Recuperata da dispositivo sequestrato.</p>
+            <p><strong>Link originale:</strong> <a href="indexLogin.html" id="link-circolo">[ ACCEDI AL SITO — IL CIRCOLO ]</a></p>
+            <p><em>⚠ Attenzione: il sito richiede un codice di accesso. Password in fase di verifica.</em></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="piede">
+        <p>POLIZIA DI STATO — USO INTERNO — VIETATA LA DIVULGAZIONE</p>
+        <p id="ora"></p>
+    </div>
+
+    <script src="scriptPolizia.js"></script>
+</body>
+</html>

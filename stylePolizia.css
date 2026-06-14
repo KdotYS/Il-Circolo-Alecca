@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Oswald:wght@400;600;700&display=swap');
+
+:root {
+    --blu: #003087;
+    --oro: #c8a84b;
+    --rosso: #cc0000;
+    --bianco: #e8eef5;
+    --sfondo: #0f1923;
+}
+
+body {
+    background-color: var(--sfondo);
+    background-image:
+        linear-gradient(rgba(0,48,135,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,48,135,0.07) 1px, transparent 1px),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 28px 28px, 28px 28px, 200px 200px;
+    color: var(--bianco);
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* INTESTAZIONE */
+#intestazione {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(180deg, #001040 0%, #0a0f1a 100%);
+    border: 2px solid var(--oro);
+    border-top: 7px solid var(--blu);
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 0 4px 40px rgba(0,48,135,0.5), inset 0 1px 0 rgba(200,168,75,0.15);
+}non
+
+#intestazione::before,
+#intestazione::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: repeating-linear-gradient(180deg,
+        var(--blu) 0px, var(--blu) 10px,
+        var(--oro) 10px, var(--oro) 20px
+    );
+}
+#intestazione::before { left: 0; }
+#intestazione::after  { right: 0; }
+
+#stemma {
+    width: 68px;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 10px rgba(200,168,75,0.6));
+}
+
+#intestazione h1 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 14px;
+    margin: 6px 0;
+}
+
+#intestazione h2 {
+    color: var(--oro);
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin: 4px 0;
+}
+
+#livello {
+    display: inline-block;
+    background: var(--rosso);
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 14px;
+    padding: 5px 18px;
+    border: 1px solid #ff4444;
+    animation: lampeggia 2.5s infinite;
+}
+
+@keyframes lampeggia {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.55; }
+}
+
+/* DIVISORE */
+hr {
+    border: none;
+    border-top: 1px solid rgba(200,168,75,0.2);
+    margin: 22px 0;
+}
+
+/* FASCICOLO */
+#fascicolo {
+    background: linear-gradient(135deg, #080d18 0%, #10182a 100%);
+    border: 1px solid #2a3040;
+    border-left: 6px solid var(--oro);
+    padding: 18px 24px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#fascicolo::after {
+    content: 'RISERVATO';
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: rgba(204,0,0,0.12);
+    font-family: 'Oswald', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    pointer-events: none;
+    transform: rotate(-8deg);
+}
+
+#fascicolo h3 {
+    color: var(--oro);
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+#stato {
+    color: var(--rosso);
+    font-weight: bold;
+}
+
+/* SEZIONI */
+.sezione { margin-bottom: 10px; }
+
+.sezione h3 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(200,168,75,0.2);
+}
+
+/* SCHEDE */
+.scheda {
+    background: #080d18;
+    border: 1px solid #1e2a3a;
+    border-left: 5px solid var(--blu);
+    padding: 16px 20px;
+    position: relative;
+}
+
+.scheda::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent rgba(200,168,75,0.35) transparent transparent;
+}
+
+.scheda p {
+    margin: 6px 0;
+    line-height: 1.75;
+    font-size: 13.5px;
+    color: #b8c8d8;
+}
+
+/* LINK */
+#link-circolo {
+    color: var(--oro);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 1px dashed rgba(200,168,75,0.4);
+    transition: color 0.2s;
+}
+
+#link-circolo:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* PIEDE */
+#piede {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 11px;
+    color: #364050;
+    letter-spacing: 3px;
+}
+
+#ora {
+    color: #3a5070;
+    font-size: 12px;
+    margin-top: 5px;
+}
+/* MULTIMEDIA */
+#multimedia {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 860px;
+    margin: 0 auto 30px auto;
+}
+
+.video-blocco {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #080d18;
+    border: 1px solid #1e2a3a;
+    border-left: 5px solid var(--blu);
+    padding: 14px 18px;
+}
+
+.video-label {
+    color: var(--oro);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.video-blocco video {
+    width: 100%;
+    border: 1px solid rgba(200,168,75,0.3);
+    box-shadow: 0 0 20px rgba(0,48,135,0.4);
+}
+
+.video-blocco audio {
+    width: 100%;
+    accent-color: var(--oro);
+}
+/* CASO INTESTAZIONE */
+#caso-intestazione {
+    max-width: 860px;
+    margin: 0 auto 30px auto;
+    border: 1px solid rgba(200,168,75,0.3);
+    border-top: 5px solid var(--rosso);
+    background: linear-gradient(135deg, #080d18 0%, #10182a 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+#caso-intestazione::after {
+    content: 'OMICIDIO';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    color: rgba(204,0,0,0.06);
+    font-family: 'Oswald', sans-serif;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#caso-header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(200,168,75,0.2);
+    background: linear-gradient(180deg, #0a0010 0%, #080d18 100%);
+    position: relative;
+}
+
+#caso-header::before,
+#caso-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: repeating-linear-gradient(180deg,
+        var(--rosso) 0px, var(--rosso) 10px,
+        var(--oro) 10px, var(--oro) 20px
+    );
+}
+#caso-header::before { left: 0; }
+#caso-header::after  { right: 0; }
+
+.caso-tag {
+    display: inline-block;
+    background: var(--rosso);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 3px 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ff4444;
+    animation: lampeggia 2.5s infinite;
+}
+
+#caso-titolo {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+    margin: 8px 0 4px 0;
+    text-shadow: 0 0 20px rgba(204,0,0,0.4);
+}
+
+#caso-sottotitolo {
+    color: var(--oro);
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.caso-griglia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(200,168,75,0.1);
+    border-top: 1px solid rgba(200,168,75,0.1);
+}
+
+.caso-blocco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #080d18;
+    padding: 12px 16px;
+    position: relative;
+}
+
+.caso-blocco::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 14px 14px 0;
+    border-color: transparent rgba(200,168,75,0.2) transparent transparent;
+}
+
+.caso-etichetta {
+    color: var(--oro);
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.caso-valore {
+    color: #b8c8d8;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#stato-indagini {
+    color: var(--rosso);
+    font-weight: bold;
+    animation: lampeggia 2.5s infinite;
+}
+
+#caso-note {
+    padding: 14px 20px;
+    border-top: 1px solid rgba(200,168,75,0.2);
+    background: rgba(204,0,0,0.04);
+    border-left: 5px solid var(--rosso);
+}
+
+#caso-note p {
+    margin: 0;
+    font-size: 13px;
+    color: #b8c8d8;
+    line-height: 1.75;
+}
