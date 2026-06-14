@@ -383,14 +383,20 @@ hr {
     position: relative;
     overflow: hidden;
 }
+
 .sezione {
     margin: 0 auto 10px auto;
     max-width: 860px;
 }
-.scheda,
+
 hr {
     border: none;
     border-top: 1px solid rgba(200,168,75,0.2);
     margin: 22px auto;
     max-width: 860px;
+}
+
+#piede {
+    max-width: 860px;
+    margin: 40px auto 0 auto;
 }
